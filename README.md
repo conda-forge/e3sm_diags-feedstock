@@ -5,13 +5,15 @@ Home: https://github.com/E3SM-Project/e3sm_diags
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/e3sm_diags-feedstock/blob/master/LICENSE.txt)
 
 Summary: Diagnostics package for the DOE's Energy Exascale Earth System Model
 (E3SM) project.
 
 
+Development: https://github.com/E3SM-Project/e3sm_diags
 
+Documentation: https://e3sm-project.github.io/e3sm_diags/docs/html/index.html
 
 Current build status
 ====================
