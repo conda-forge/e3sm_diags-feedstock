@@ -8,8 +8,8 @@ package:
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
   sha256: cd4651e4f45a956e5f55555e813b166cd37d04689dbc56fdb2c2b7e2540245c6
-  patches:
-    - 0001-Disable-failing-tests.patch
+  # patches:
+  #   - 0001-Disable-failing-tests.patch
 
 build:
   number: 0
@@ -48,8 +48,7 @@ test:
     - acme_diags
   commands:
     - e3sm_diags --help
-    - cd tests/system && python -m unittest
-    - cd tests && python -m unittest
+    - bash tests/test.sh
 
 about:
   home: https://github.com/E3SM-Project/e3sm_diags
