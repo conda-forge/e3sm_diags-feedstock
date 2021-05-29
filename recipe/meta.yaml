@@ -32,7 +32,7 @@ requirements:
     - cdtime
     - netcdf4
     - numpy
-    - matplotlib-base
+    - matplotlib-base 3.3.4
     - cartopy
     - beautifulsoup4
     - lxml
