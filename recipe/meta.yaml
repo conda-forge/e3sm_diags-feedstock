@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
   sha256: cd4651e4f45a956e5f55555e813b166cd37d04689dbc56fdb2c2b7e2540245c6
+  patches:
+    - 0001-Skip-image-comparison.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
