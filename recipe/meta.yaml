@@ -47,7 +47,7 @@ test:
     - acme_diags
   commands:
     - e3sm_diags --help
-    - bash tests/test.sh
+    - export CHECK_IMAGES=False; bash tests/test.sh
 
 about:
   home: https://github.com/E3SM-Project/e3sm_diags
