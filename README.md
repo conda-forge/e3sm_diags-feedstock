@@ -125,5 +125,3 @@ Feedstock Maintainers
 * [@forsyth2](https://github.com/forsyth2/)
 * [@xylar](https://github.com/xylar/)
 
-# dummy edit to restart ci
-
