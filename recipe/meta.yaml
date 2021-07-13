@@ -1,5 +1,5 @@
 {% set name = "e3sm_diags" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: cd4651e4f45a956e5f55555e813b166cd37d04689dbc56fdb2c2b7e2540245c6
-  patches:
-    - 0001-Skip-image-comparison.patch
+  sha256: 1d71d4d203155dd2e15c7c94f0502402cb42768f32fce01e303ede5c08d8b255
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -33,13 +31,14 @@ requirements:
     - genutil
     - cdtime
     - numpy
+    - netcdf4
     - matplotlib-base
     - cartopy
     - beautifulsoup4
     - lxml
     - dask
     - scipy
-    - output_viewer 1.3.1
+    - output_viewer >=1.3.3
 
 test:
   source_files:
@@ -48,7 +47,7 @@ test:
     - acme_diags
   commands:
     - e3sm_diags --help
-    - bash tests/test.sh
+    - export CHECK_IMAGES=False; bash tests/test.sh
 
 about:
   home: https://github.com/E3SM-Project/e3sm_diags
