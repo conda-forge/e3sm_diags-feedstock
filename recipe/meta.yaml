@@ -1,5 +1,5 @@
 {% set name = "e3sm_diags" %}
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,15 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: 1d71d4d203155dd2e15c7c94f0502402cb42768f32fce01e303ede5c08d8b255
+  sha256: 0aeef78db9697abc5624b6aae7f10242d60e3eb2d7c5da396f467a296517c068
 
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-    - e3sm_diags = acme_diags.acme_diags_driver:main
-    - acme_diags = acme_diags.acme_diags_driver:main
-    - e3sm_diags_vars = acme_diags.acme_diags_vars:main
+    - e3sm_diags = e3sm_diags.e3sm_diags_driver:main
+    - e3sm_diags_vars = e3sm_diags.e3sm_diags_vars:main
 
 requirements:
   host:
@@ -34,6 +33,7 @@ requirements:
     - netcdf4
     - matplotlib-base
     - cartopy
+    - cartopy_offlinedata
     - beautifulsoup4
     - lxml
     - dask
@@ -44,7 +44,7 @@ test:
   source_files:
     - tests/*
   imports:
-    - acme_diags
+    - e3sm_diags
   commands:
     - e3sm_diags --help
     - export CHECK_IMAGES=False; bash tests/test.sh
