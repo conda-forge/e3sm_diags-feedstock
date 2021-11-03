@@ -14,9 +14,8 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-    - e3sm_diags = acme_diags.acme_diags_driver:main
-    - acme_diags = acme_diags.acme_diags_driver:main
-    - e3sm_diags_vars = acme_diags.acme_diags_vars:main
+    - e3sm_diags = e3sm_diags.e3sm_diags_driver:main
+    - e3sm_diags_vars = e3sm_diags.e3sm_diags_vars:main
 
 requirements:
   host:
@@ -34,6 +33,7 @@ requirements:
     - netcdf4
     - matplotlib-base
     - cartopy
+    - cartopy_offlinedata
     - beautifulsoup4
     - lxml
     - dask
@@ -44,7 +44,7 @@ test:
   source_files:
     - tests/*
   imports:
-    - acme_diags
+    - e3sm_diags
   commands:
     - e3sm_diags --help
     - export CHECK_IMAGES=False; bash tests/test.sh
