@@ -61,7 +61,8 @@ conda search e3sm_diags --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -123,5 +124,6 @@ Feedstock Maintainers
 
 * [@chengzhuzhang](https://github.com/chengzhuzhang/)
 * [@forsyth2](https://github.com/forsyth2/)
+* [@tomvothecoder](https://github.com/tomvothecoder/)
 * [@xylar](https://github.com/xylar/)
 
