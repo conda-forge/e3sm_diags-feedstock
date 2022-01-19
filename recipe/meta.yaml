@@ -1,5 +1,5 @@
 {% set name = "e3sm_diags" %}
-{% set version = "2.6.0rc1" %}
+{% set version = "2.6.1rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: b390ea90a7dfc0a1d0b7220ce48b00de3de1cfcae18163ee90a48220f76a0f79
+  sha256: 86027c14c4edfab79122dc094cfbd62a7657654460e5ddadcd9ada54aee62218
 
 build:
   number: 0
