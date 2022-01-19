@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
   sha256: 0aeef78db9697abc5624b6aae7f10242d60e3eb2d7c5da396f467a296517c068
+  patches:
+    - 0001-fix-errorbar.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -65,3 +67,4 @@ extra:
     - xylar
     - chengzhuzhang
     - forsyth2
+    - tomvothecoder
