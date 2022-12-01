@@ -1,5 +1,5 @@
 {% set name = "e3sm_diags" %}
-{% set version = "2.7.0" %}
+{% set version = "2.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: 9d2df9edf3c59c84f4665592e0d0a68e0cc6300eb10eb50ce1196e0ac560350a
+  sha256: ad44e9d851425aaebf62c4037d7fbc12aaf09e259c5ace4bb611495069dbee23
 
 build:
   number: 0
@@ -30,7 +30,6 @@ requirements:
     - cartopy_offlinedata
     - cdp
     - cdms2
-    - cdtime
     - cdutil
     - genutil
     - lxml
