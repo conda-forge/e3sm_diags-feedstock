@@ -1,5 +1,5 @@
 {% set name = "e3sm_diags" %}
-{% set version = "2.8.0rc1" %}
+{% set version = "2.9.0rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: 3e86334079fae8ac2e20bbb60784045a775a7a0305ce417ba6ed3af5e0e744c7
+  sha256: d6742c4913c334e15a7a186a8355370379c2171ae930dfb1badcacfde41ee224
 
 build:
   number: 0
@@ -19,25 +19,26 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
 
   run:
-    - python >=3.8
+    - python >=3.9
     - pip
     - beautifulsoup4
-    - cartopy
+    - cartopy >=0.17.0
     - cartopy_offlinedata
-    - cdp
-    - cdms2
-    - cdutil
-    - genutil
+    - cdp 1.7.0
+    - cdms2 3.1.5
+    - cdutil 8.2.1
+    - dask
+    - genutil 8.2.1
     - lxml
-    - mache
+    - mache >=0.15.0
     - matplotlib-base
     - netcdf4
-    - numpy
-    - xarray
+    - numpy >=1.23.0
+    - xarray >=2023.02.0
 
 test:
   requires:
