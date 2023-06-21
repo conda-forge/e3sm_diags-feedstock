@@ -1,11 +1,11 @@
-About e3sm_diags
-================
+About e3sm_diags-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/e3sm_diags-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/E3SM-Project/e3sm_diags
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/e3sm_diags-feedstock/blob/master/LICENSE.txt)
 
 Summary: Diagnostics package for the DOE's Energy Exascale Earth System Model
 (E3SM) project.
@@ -21,8 +21,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10659&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e3sm_diags-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10659&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e3sm_diags-feedstock?branchName=main">
       </a>
     </td>
   </tr>
