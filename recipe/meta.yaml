@@ -44,6 +44,7 @@ test:
   requires:
     - pip
     - scipy
+    - pytest
   source_files:
     - tests/*
   imports:
