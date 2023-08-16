@@ -1,5 +1,5 @@
 {% set name = "e3sm_diags" %}
-{% set version = "2.9.0rc2" %}
+{% set version = "2.9.0rc3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: 8132a1d581d8e7e3a4b484d9938640cfdaebae803df51f84b35fbd48148502c7
+  sha256: 8371317c7474f149597bc97c4f4773452c0a6dc1c7390d4b039f63932953583b
 
 build:
   number: 0
@@ -32,12 +32,14 @@ requirements:
     - cdms2 3.1.5
     - cdutil 8.2.1
     - dask
+    - esmpy >=8.4.0
     - genutil 8.2.1
     - lxml
     - mache >=0.15.0
     - matplotlib-base
     - netcdf4
     - numpy >=1.23.0
+    - shapely >=2.0.0,<3.0.0
     - xarray >=2023.02.0
 
 test:
