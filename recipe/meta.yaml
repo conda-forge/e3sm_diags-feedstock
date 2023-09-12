@@ -46,6 +46,8 @@ test:
   requires:
     - pip
     - pytest
+    - pytest-cov
+    - scipy
   source_files:
     - tests/*
   imports:
