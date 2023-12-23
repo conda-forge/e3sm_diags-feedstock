@@ -38,14 +38,14 @@ Current release info
 Installing e3sm_diags
 =====================
 
-Installing `e3sm_diags` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `e3sm_diags` from the `conda-forge/label/e3sm_diags_dev` channel can be achieved by adding `conda-forge/label/e3sm_diags_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/e3sm_diags_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `e3sm_diags` can be installed with `conda`:
+Once the `conda-forge/label/e3sm_diags_dev` channel has been enabled, `e3sm_diags` can be installed with `conda`:
 
 ```
 conda install e3sm_diags
@@ -60,26 +60,26 @@ mamba install e3sm_diags
 It is possible to list all of the versions of `e3sm_diags` available on your platform with `conda`:
 
 ```
-conda search e3sm_diags --channel conda-forge
+conda search e3sm_diags --channel conda-forge/label/e3sm_diags_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search e3sm_diags --channel conda-forge
+mamba search e3sm_diags --channel conda-forge/label/e3sm_diags_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search e3sm_diags --channel conda-forge
+mamba repoquery search e3sm_diags --channel conda-forge/label/e3sm_diags_dev
 
 # List packages depending on `e3sm_diags`:
-mamba repoquery whoneeds e3sm_diags --channel conda-forge
+mamba repoquery whoneeds e3sm_diags --channel conda-forge/label/e3sm_diags_dev
 
 # List dependencies of `e3sm_diags`:
-mamba repoquery depends e3sm_diags --channel conda-forge
+mamba repoquery depends e3sm_diags --channel conda-forge/label/e3sm_diags_dev
 ```
 
 
@@ -101,7 +101,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
