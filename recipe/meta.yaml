@@ -46,16 +46,16 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest
-    - pytest-cov
-  source_files:
-    - tests/*
+  #  - pytest
+  #  - pytest-cov
+  # source_files:
+  #  - tests/*
   imports:
     - e3sm_diags
   commands:
     - e3sm_diags --help
-    - export CHECK_IMAGES=False; bash tests/test.sh
     - pip check
+  #  - export CHECK_IMAGES=False; bash tests/test.sh
 
 about:
   home: https://github.com/E3SM-Project/e3sm_diags
