@@ -151,5 +151,6 @@ Feedstock Maintainers
 
 * [@chengzhuzhang](https://github.com/chengzhuzhang/)
 * [@forsyth2](https://github.com/forsyth2/)
+* [@tomvothecoder](https://github.com/tomvothecoder/)
 * [@xylar](https://github.com/xylar/)
 
