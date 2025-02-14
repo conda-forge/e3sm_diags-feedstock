@@ -1,5 +1,5 @@
 {% set name = "e3sm_diags" %}
-{% set version = "3.0.0rc2" %}
+{% set version = "3.0.0rc3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: eb0c28c3fc993f9961eab28fc214659bafc3c2e488872e9dcf59eadec8a8eed6
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
 build:
   number: 0
@@ -29,14 +29,15 @@ requirements:
     - cartopy >=0.17.0
     - cartopy_offlinedata
     - cf-units
-    - dask <2024.12.0
+    - dask !=2024.12.0,!=2024.12.1
     - lxml
     - mache >=0.15.0
     - matplotlib-base >=3.8.2
     - netcdf4
     - output_viewer >=1.3.0
     - numpy >=2.0.0,<3.0.0
-    - scipy <1.15
+    - pywavelets
+    - scipy
     - xarray >=2024.3.0
     - xcdat >=0.7.3,<1.0.0
     - xesmf >=0.8.7
