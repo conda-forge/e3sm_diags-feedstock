@@ -7,8 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  # TODO: Update sha256 checksum when release is made on GitHub.
-  sha256:
+  sha256: 144849f4d69becfbcf509d5245a81ae8551f690cbee3a69f4ddc377988bf2f6a
 
 build:
   number: 0
