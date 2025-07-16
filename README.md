@@ -33,7 +33,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-e3sm_diags-green.svg)](https://anaconda.org/conda-forge/e3sm_diags) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/e3sm_diags.svg)](https://anaconda.org/conda-forge/e3sm_diags) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/e3sm_diags.svg)](https://anaconda.org/conda-forge/e3sm_diags) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/e3sm_diags.svg)](https://anaconda.org/conda-forge/e3sm_diags) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-e3sm__diags-green.svg)](https://anaconda.org/conda-forge/e3sm_diags) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/e3sm_diags.svg)](https://anaconda.org/conda-forge/e3sm_diags) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/e3sm_diags.svg)](https://anaconda.org/conda-forge/e3sm_diags) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/e3sm_diags.svg)](https://anaconda.org/conda-forge/e3sm_diags) |
 
 Installing e3sm_diags
 =====================
