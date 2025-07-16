@@ -1,5 +1,6 @@
 {% set name = "e3sm_diags" %}
 {% set version = "3.0.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
