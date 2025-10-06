@@ -1,6 +1,6 @@
 {% set name = "e3sm_diags" %}
-{% set version = "3.0.1" %}
-{% set python_min = "3.10" %}
+{% set version = "3.1.0rc1" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: 4520d36d345a35ff03ca0b1f8362b9681f455ac1824a4e1bb27d53d6cc07ac2d
+  sha256: 7af649ee17bad9364beb829cb246c58f3c1c05338504aad8511265dc1f078cb9
 
 build:
   number: 0
@@ -38,10 +38,14 @@ requirements:
     - netcdf4
     - output_viewer >=1.3.0
     - numpy >=2.0.0,<3.0.0
+    # temporary dependency to make pip check pass.  Missing in geopandas-base,
+    # brought in via geopandas-base > goeviews > uxarray
+    - pyogrio >=0.7.2
     - pywavelets
     - scipy
+    - uxarray >=2023.3.0
     - xarray >=2024.3.0
-    - xcdat >=0.7.3,<1.0.0
+    - xcdat >=0.10.0,<1.0.0
     - xesmf >=0.8.7
     - xskillscore >=0.0.20
 
