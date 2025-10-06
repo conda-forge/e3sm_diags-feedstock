@@ -40,7 +40,7 @@ requirements:
     - numpy >=2.0.0,<3.0.0
     # temporary dependency to make pip check pass.  Missing in geopandas-base,
     # brought in via geopandas-base > goeviews > uxarray
-    - pyogrio >= 0.7.2
+    - pyogrio >=0.7.2
     - pywavelets
     - scipy
     - uxarray >=2023.3.0
