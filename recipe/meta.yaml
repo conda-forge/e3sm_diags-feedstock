@@ -1,5 +1,6 @@
 {% set name = "e3sm_diags" %}
-{% set version = "3.0.0rc3" %}
+{% set version = "3.1.0rc1" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +8,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: cc97c89ca9b35c7ef7251de8f38cd1abcebc19e02d3f692af6c955adbe53fa27
+  sha256: 7af649ee17bad9364beb829cb246c58f3c1c05338504aad8511265dc1f078cb9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -38,8 +39,9 @@ requirements:
     - numpy >=2.0.0,<3.0.0
     - pywavelets
     - scipy
+    - uxarray >=2023.3.0
     - xarray >=2024.3.0
-    - xcdat >=0.7.3,<1.0.0
+    - xcdat >=0.10.0,<1.0.0
     - xesmf >=0.8.7
     - xskillscore >=0.0.20
 
