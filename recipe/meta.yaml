@@ -11,7 +11,7 @@ source:
   sha256: 6ea8a5cc434394d198a72ce16822fc4fc3d54eca8e95c5486317c17b31169af3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -25,13 +25,14 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<3.14
     - pip
     - beautifulsoup4
     - cartopy >=0.17.0
     - cartopy_offlinedata
     - cf-units
     - dask !=2024.12.0,!=2024.12.1
+    - esmf >=8.8.0 nompi_*
     - lxml
     - mache >=0.15.0
     - matplotlib-base >=3.8.2
