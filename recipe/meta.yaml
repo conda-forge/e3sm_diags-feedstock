@@ -1,5 +1,5 @@
 {% set name = "e3sm_diags" %}
-{% set version = "3.1.0" %}
+{% set version = "3.1.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v{{ version }}.tar.gz
-  sha256: 6ea8a5cc434394d198a72ce16822fc4fc3d54eca8e95c5486317c17b31169af3
+  sha256: c62ffafca10547e1ae9bcb9c03ee13d028bdd24fecd6d02c8e0b02873ac38f04
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -25,10 +25,12 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }}
     - pip
     - beautifulsoup4
-    - cartopy >=0.17.0
+    # Note: Temporary constrain cartopy <0.25.0 to prevent plot regression issues.
+    # Related: https://github.com/E3SM-Project/e3sm_diags/issues/1026
+    - cartopy >=0.17.0,<0.25.0
     - cartopy_offlinedata
     - cf-units
     - dask !=2024.12.0,!=2024.12.1
@@ -42,8 +44,8 @@ requirements:
     - pywavelets
     - scipy
     - uxarray >=2023.3.0
-    - xarray >=2024.3.0,<2025.11.0
-    - xcdat >=0.10.1,<1.0.0
+    - xarray >=2024.3.0
+    - xcdat >=0.11.1,<1.0.0
     - xesmf >=0.8.7
     - xskillscore >=0.0.20
 
@@ -74,4 +76,4 @@ extra:
     - chengzhuzhang
     - forsyth2
     - tomvothecoder
-    - andrewdnolan 
+    - andrewdnolan
