@@ -1,0 +1,87 @@
+schema_version: 1
+
+context:
+  name: e3sm_diags
+  version: "3.2.0rc1"
+  python_min: "3.11"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/E3SM-Project/e3sm_diags/archive/v${{ version }}.tar.gz
+  sha256: 40f1bba79f5fed4e8830804ef827f4200e09b69705dd5d1c6453f0995d2627ab
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - e3sm_diags = e3sm_diags.e3sm_diags_driver:main
+      - e3sm_diags_vars = e3sm_diags.e3sm_diags_vars:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }},<3.14
+    - pip
+    - beautifulsoup4
+    # Temporary constrain cartopy <0.25.0 to prevent plot regression issues.
+    # Related: https://github.com/E3SM-Project/e3sm_diags/issues/1026
+    - cartopy >=0.17.0,<0.25.0
+    - cartopy_offlinedata
+    - cf-units
+    - dask !=2024.12.0,!=2024.12.1
+    - esmf >=8.8.0 nompi_*
+    - lxml
+    - mache >=0.15.0
+    - matplotlib-base >=3.8.2
+    - netcdf4
+    - output_viewer >=1.3.0
+    - numpy >=2.0.0,<3.0.0
+    - pywavelets
+    - scipy
+    - uxarray >=2023.3.0
+    - xarray >=2024.3.0
+    - xcdat >=0.11.1,<1.0.0
+    - xesmf >=0.8.7
+    - xskillscore >=0.0.20
+
+    # temporarily constraint this xcdat dependency to get pip check to pass
+    - regionmask >=0.6.2
+
+tests:
+  - python:
+      imports:
+        - e3sm_diags
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pip
+    script:
+      - e3sm_diags --help
+
+about:
+  homepage: https://github.com/E3SM-Project/e3sm_diags
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: |
+    Diagnostics package for the DOE's Energy Exascale Earth System Model
+    (E3SM) project.
+  documentation: https://e3sm-project.github.io/e3sm_diags/docs/html/index.html
+  repository: https://github.com/E3SM-Project/e3sm_diags
+
+extra:
+  recipe-maintainers:
+    - xylar
+    - chengzhuzhang
+    - forsyth2
+    - tomvothecoder
+    - andrewdnolan
