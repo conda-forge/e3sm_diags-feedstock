@@ -52,6 +52,9 @@ requirements:
     - xesmf >=0.8.7
     - xskillscore >=0.0.20
 
+    # temporarily constraint this xcdat dependency to get pip check to pass
+    - regionmask >=0.6.2
+
 tests:
   - python:
       imports:
