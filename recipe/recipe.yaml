@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: e3sm_diags
-  version: "3.1.1"
+  version: "3.2.0rc1"
   python_min: "3.11"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v${{ version }}.tar.gz
-  sha256: c62ffafca10547e1ae9bcb9c03ee13d028bdd24fecd6d02c8e0b02873ac38f04
+  sha256: 40f1bba79f5fed4e8830804ef827f4200e09b69705dd5d1c6453f0995d2627ab
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
@@ -28,7 +28,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<3.14
     - pip
     - beautifulsoup4
     # Temporary constrain cartopy <0.25.0 to prevent plot regression issues.
