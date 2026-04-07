@@ -10,7 +10,6 @@ Package license: BSD-3-Clause
 Summary: Diagnostics package for the DOE's Energy Exascale Earth System Model
 (E3SM) project.
 
-
 Development: https://github.com/E3SM-Project/e3sm_diags
 
 Documentation: https://e3sm-project.github.io/e3sm_diags/docs/html/index.html
@@ -19,11 +18,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10659&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e3sm_diags-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
