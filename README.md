@@ -10,7 +10,6 @@ Package license: BSD-3-Clause
 Summary: Diagnostics package for the DOE's Energy Exascale Earth System Model
 (E3SM) project.
 
-
 Development: https://github.com/E3SM-Project/e3sm_diags
 
 Documentation: https://e3sm-project.github.io/e3sm_diags/docs/html/index.html
@@ -19,11 +18,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10659&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/e3sm_diags-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
@@ -38,14 +36,14 @@ Current release info
 Installing e3sm_diags
 =====================
 
-Installing `e3sm_diags` from the `conda-forge/label/e3sm_diags_dev` channel can be achieved by adding `conda-forge/label/e3sm_diags_dev` to your channels with:
+Installing `e3sm_diags` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/e3sm_diags_dev
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/e3sm_diags_dev` channel has been enabled, `e3sm_diags` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `e3sm_diags` can be installed with `conda`:
 
 ```
 conda install e3sm_diags
@@ -60,26 +58,26 @@ mamba install e3sm_diags
 It is possible to list all of the versions of `e3sm_diags` available on your platform with `conda`:
 
 ```
-conda search e3sm_diags --channel conda-forge/label/e3sm_diags_dev
+conda search e3sm_diags --channel conda-forge
 ```
 
 or with `mamba`:
 
 ```
-mamba search e3sm_diags --channel conda-forge/label/e3sm_diags_dev
+mamba search e3sm_diags --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search e3sm_diags --channel conda-forge/label/e3sm_diags_dev
+mamba repoquery search e3sm_diags --channel conda-forge
 
 # List packages depending on `e3sm_diags`:
-mamba repoquery whoneeds e3sm_diags --channel conda-forge/label/e3sm_diags_dev
+mamba repoquery whoneeds e3sm_diags --channel conda-forge
 
 # List dependencies of `e3sm_diags`:
-mamba repoquery depends e3sm_diags --channel conda-forge/label/e3sm_diags_dev
+mamba repoquery depends e3sm_diags --channel conda-forge
 ```
 
 
@@ -149,6 +147,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@andrewdnolan](https://github.com/andrewdnolan/)
 * [@chengzhuzhang](https://github.com/chengzhuzhang/)
 * [@forsyth2](https://github.com/forsyth2/)
 * [@tomvothecoder](https://github.com/tomvothecoder/)
