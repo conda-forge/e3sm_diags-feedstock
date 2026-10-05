@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: e3sm_diags
   version: "3.3.0rc1"
-  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
