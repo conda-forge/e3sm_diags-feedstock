@@ -13,7 +13,7 @@ source:
   sha256: 12784fcbe868de0070779ddd0384e75be749ce596820f3b38ec37f39ee70971a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
@@ -27,7 +27,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=${{ python_min }},<3.14
+    - python >=${{ python_min }},<3.15
     - pip
     - beautifulsoup4
     - cartopy >=0.26.0
@@ -54,7 +54,9 @@ tests:
       imports:
         - e3sm_diags
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
