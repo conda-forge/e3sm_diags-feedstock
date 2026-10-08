@@ -2,18 +2,18 @@ schema_version: 1
 
 context:
   name: e3sm_diags
-  version: "3.3.0rc1"
+  version: "3.3.0rc2"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/e3sm_diags/archive/v${{ version }}.tar.gz
-  sha256: 12784fcbe868de0070779ddd0384e75be749ce596820f3b38ec37f39ee70971a
+  url: https://github.com/E3SM-Project/e3sm_diags/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: afb6c0602bae7d48495ac1eaaee538340d3c329de1180105ea34b42c0bc68267
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
@@ -45,7 +45,7 @@ requirements:
     - scipy
     - uxarray-base >=2026.09.1
     - xarray >=2024.3.0
-    - xcdat >=0.11.3,<1.0.0
+    - xcdat >=0.11.5,<1.0.0
     - xesmf >=0.8.7
     - xskillscore >=0.0.20
 
