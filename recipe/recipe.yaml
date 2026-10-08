@@ -9,7 +9,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/e3sm_diags/archive/refs/tags/v${{ version }}.tar.gz
+  url: https://github.com/E3SM-Project/e3sm_diags/archive/v${{ version }}.tar.gz
   sha256: afb6c0602bae7d48495ac1eaaee538340d3c329de1180105ea34b42c0bc68267
 
 build:
