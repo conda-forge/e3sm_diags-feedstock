@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: e3sm_diags
-  version: "3.3.0rc2"
+  version: "3.3.0rc3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v${{ version }}.tar.gz
-  sha256: afb6c0602bae7d48495ac1eaaee538340d3c329de1180105ea34b42c0bc68267
+  sha256: e22b6e94b3fdb6c8ae8f7bcef94906f77deb1c441ae1e421ed9684f79a23ae71
 
 build:
   number: 0
@@ -36,7 +36,7 @@ requirements:
     - dask !=2024.12.0,!=2024.12.1
     - esmf >=8.8.0 nompi_*
     - lxml
-    - mache >=0.15.0
+    - mache >=5.0.0
     - matplotlib-base >=3.11.1
     - netcdf4
     - output_viewer >=1.3.0
