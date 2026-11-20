@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: e3sm_diags
-  version: "3.2.0"
+  version: "3.3.0"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/e3sm_diags/archive/v${{ version }}.tar.gz
-  sha256: c44d2371e04b54e654ac295695659eb298a30cb2b9efa9ccab6a2e386e4e35af
+  sha256: 8d2b2f0416b36ae293d6ed7a2b4e2db10f5b675ea42f1a309e506daffc7e3077
 
 build:
   number: 0
